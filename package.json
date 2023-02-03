@@ -1,0 +1,24 @@
+{
+  "name": "nodewithmongoose",
+  "version": "1.0.0",
+  "description": "This is a project where we learn node js with mongoose odm",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sangram Behera",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.33.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "mongoose": "^6.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
