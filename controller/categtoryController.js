@@ -12,6 +12,18 @@ module.exports.readCategory = async (req, res) => {
     console.log(error);
   }
 };
+module.exports.readCategoryOne = async (req, res) => {
+  try {
+    const data = await Category.findOne({_id:req.params.id});
+    if (!data) {
+      res.send("Category not found");
+      return;
+    }
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 module.exports.createCategory = async (req, res) => {
   try {
