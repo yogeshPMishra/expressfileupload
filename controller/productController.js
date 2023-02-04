@@ -19,23 +19,23 @@ module.exports.readProduct = async (req, res) => {
   }
 };
 
-module.exports.readProductOne = async (req, res) => {
-  try {
-    const data = await Product.findOne({_id:req.params.id}).aggregate([
-      {
-        $lookup: {
-          from: "categories",
-          localField: "category_id",
-          foreignField: "_id",
-          as: "joinedvalue",
-        },
-      },
-    ]);
-    res.send(data);
-  } catch (error) {
-    console.log(error);
-  }
-};
+// module.exports.readProductOne = async (req, res) => {
+//   try {
+//     const data = await Product.findOne({_id:req.params.id}).aggregate([
+//       {
+//         $lookup: {
+//           from: "categories",
+//           localField: "category_id",
+//           foreignField: "_id",
+//           as: "joinedvalue",
+//         },
+//       },
+//     ]);
+//     res.send(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 module.exports.createProduct = async (req, res) => {
   try {

@@ -4,7 +4,7 @@ const {readProduct,readProductOne,createProduct,updateProduct,deleteProduct} = r
 
 productRouter.route('/products').get(readProduct);
 productRouter.route('/addproduct').post(createProduct);
-productRouter.route('/product/:id').get(readProductOne);
+// productRouter.route('/product/:id').get(readProductOne);
 productRouter.route('/updateproduct/:id').put(updateProduct);
 productRouter.route('/deleteproduct/:id').delete(deleteProduct);
 
